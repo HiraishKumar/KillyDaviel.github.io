@@ -1,4 +1,42 @@
-HTML{
-    background-color: azure;
+html{
+    background-color: #24252a;
     font-family: 'Times New Roman', Times, serif;
+    color: aliceblue;
+}
+
+.page{
+    display: flex;
+}
+
+div{
+    border:2px solid red;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ======SIDEBAR====== */
+.side-bar{
+    background-color: aliceblue;
+    width: 15%;
+    height: 100vh;
+}
+
+.header-item-list{
+    display: flex;
+    list-style: none;
+}
+
+.header-item-list li{
+    color: aliceblue;
+    font-weight: 200;
+}
+/* ====MAIN ARTICLE==== */
+.main-article{
+    background-color: aquamarine;
+    width: 85%;
+    height: 100vh;
 }

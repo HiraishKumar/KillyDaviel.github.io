@@ -1,165 +1,26 @@
-html{
-    background: #000000;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    margin-bottom: 10px;
-}
-
-time{
-    color: aliceblue;
-}
-
-span{
-    color: aliceblue;
-}
-
-a.active{
-    color: rgb(255, 255, 255);
-}
-
-a{
-    color: rgb(220, 51, 51);
-}
-
-.site_header{
-    text-align: center;
-    padding-bottom: 5;
-    margin-bottom: 1;
-}
-
-
-/* what? */
-/* huh? */
-h1{
-    color: aliceblue;
-}
-
-h2{
-    color: aliceblue;
-}
-
-p{
-    color: aliceblue;
-    font-size: 21px;
-}
-
-hr{
-    border-color:black;
-    padding-bottom: 2px;
-    max-width: 1300px;
-}
-
-#contents_list{
-    border: 2px solid white;
-    padding-right: -1000px;
-    max-width: 500px;
-}
-
-.article_image{
-    display: block;
-    padding-left: 9%;
-    width: 95%;
-}
-
-.logo_head_image{
-    display: block;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.article_head{
-    display: block;
-    text-align:start;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;    
-}
-
-.content{
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 2em;
-    padding-bottom: 2em
-}
-
-.container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.left_container{
-    /* background-color: aqua; */
-    float: left;
-    width: 25%;
-}
-
-.middle_container{
-    /* background-color: aqua; */
-    width: 44%;
-    margin-top: 0;
-    margin-bottom: 0;
-    display: inline-block;
-    justify-content: center;
-}
-
-.right_container{
-    /* background-color: aqua; */
-    float: right;
-    width: 25%;
-}
-
-.column {
-    float: left;
-    width: 33.33%;
-    padding: 5px;
+.sidebar {
+    width: 250px; /* Set initial width of the sidebar */
+    height: 100vh; /* Full height */
+    background-color: #f0f0f0; /* Example background color */
+    float: left; /* Float the sidebar to the left */
   }
-  .row {
-    display: flex;
-  }
-  /* Clear floats after image containers */
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
+
+  div{
+    border: solid red 2px;
   }
   
-
-.container_text{
-    flex-grow: 2;
-    flex-shrink: 2;
-    flex-basis: 60%;
-}
-
-.container_img{
-    padding-top: 10px;
-    scale: 1;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 30%;
-    min-width: 200px;
-    max-width: 70%;
-}
-
-.footer{
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.by-line{
-    font-size: 0.75rem;
-}
-
-.list_item{
-    padding-left: 5%;
-}
+  .content {
+    margin-left: 250px; /* Adjust content margin to account for sidebar width */
+    height: 100vh; /* Full height */
+    background-color: #ffffff; /* Example background color */
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .sidebar {
+      display: none; /* Hide the sidebar */
+    }
+    .content {
+      margin-left: 0; /* Reset content margin */
+    }
+  }

@@ -44,20 +44,45 @@ a{
 
 /* ======SIDEBAR====== */
 .side-bar{
-    background-color: rgb(55, 55, 55);
     /* width: 200px; */
     height: 100vh;
     border-style: none;
-    border-color: blue;
-    flex: 0 0 300px;
+    flex: 0 0 200px;
     transition: all 0.5s ease 0s;
-    border-right: aliceblue 2px solid;
+}
 
+.side-bar-holder{
+    position: fixed;
+    height: 100%;
+    width: 198px;
+}
+
+.side-bar-holder img{
+    width: 198px;
+}
+
+.side-bar-intro{
+    width: 178px;
+    margin: auto 20px;
+    text-align: left;
+    color: aliceblue;
 }
 
 .side-bar p {
     color:#24252a
 }
+
+.side-bar-list{
+    list-style: none;
+    margin: 10px 10px;
+}
+
+.side-bar-list li{
+    color: aliceblue;
+    margin: 10px 30px;
+}
+
+
 /* =======HEADER======= */
 
 
@@ -72,10 +97,11 @@ a{
     justify-content: flex-end;
     border-top: aliceblue 3px solid;
     border-bottom: aliceblue 3px solid;
+    border-left:  aliceblue 2px solid;
 }
 
 .logo{
-    margin: 1% 30px;
+    margin: 5px 30px;
     margin-right: auto;
     display: flex;
 }
@@ -130,9 +156,11 @@ a{
 .artcle-name{
     width: calc(100% );
     text-align: left;
-    margin: 10px 0px;
-    margin-left: 30px;
+    padding: 10px 0px;
+    padding-left: 30px;
+    border-left:  aliceblue 2px solid;
 }
+
 
 /* =====HEADER=END===== */
 
@@ -140,8 +168,48 @@ a{
 /* ====MAIN ARTICLE==== */
 .main-article{
     background-color: #24252a;
-    width: calc(100% + 300px);
-    height: 100vh;
+    width: calc(100% + 200px);
+    height: fit-content; 
+}
+
+.article-content{
+    border-left: aliceblue 2px solid;
+    padding:  3%;
+}
+
+footer{
+    border-top: 2px aliceblue solid;
+}
+
+.footer-content{
+    margin: 20px 80px;
+}
+
+.footer-content p {
+    margin: 20px 0px;
+}
+
+.footer-list{
+    margin: 20px 80px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-list li a {
+    transition: all 0.5s ease 0s;
+    padding: 5px 5px;
+}
+
+.footer-list li a:hover {
+    background-color: aliceblue;
+    border-radius: 10px;
+    border-style: none;
+    color: #24252a;
+}
+
+.footer-list li{
+    margin: 20px 20px;
 }
 
 @media (max-width: 968px) {

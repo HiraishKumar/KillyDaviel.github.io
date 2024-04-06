@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Sidebar</title>
-  <link rel="stylesheet" href="Styles/test.css">
+    <title>MathJax Example</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-  <div class="sidebar">
-    <!-- Sidebar content -->
-    Sidebar Content
-  </div>
-  <div class="content">
-    <!-- Main content -->
-    Main Content
-  </div>
+    <h1>LaTeX Equations</h1>
+    <div class="math">
+        \( E = mc^2 \)
+    </div>
+    <div class="math">
+        \( \int_{-\infty}^{\infty} e^{-x^2} dx \)
+    </div>
+    <script>
+        MathJax.typeset();
+    </script>
 </body>
 </html>

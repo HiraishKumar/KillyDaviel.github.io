@@ -66,9 +66,7 @@ tasksDOM.addEventListener('click', async (e) => {
   }
   loadingDOM.style.visibility = 'hidden'
 })
-
 // form
-
 formDOM.addEventListener('submit', async (e) => {
   e.preventDefault()
   const name = taskInputDOM.value

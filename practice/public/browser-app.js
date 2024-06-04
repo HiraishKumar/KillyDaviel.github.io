@@ -39,8 +39,7 @@ const showTasks = async () => {
 </button>
 </div>
 </div>`
-      })
-      .join('')
+      }).join('')
     tasksDOM.innerHTML = allTasks
   } catch (error) {
     tasksDOM.innerHTML =

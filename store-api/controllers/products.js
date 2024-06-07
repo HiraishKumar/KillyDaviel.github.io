@@ -1,0 +1,12 @@
+
+const getAllProductStatic = async (req,res)=>{
+    res.status(200).json({msg:"Product testing route"})
+}
+
+const getAllProducts = async (req,res)=>{
+    res.status(200).json({msg:"products route"})
+}
+
+module.exports = {
+    getAllProductStatic,getAllProducts
+}

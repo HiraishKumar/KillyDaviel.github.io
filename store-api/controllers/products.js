@@ -1,12 +1,30 @@
+const Product = require('../models/product')
+
 
 const getAllProductStatic = async (req,res)=>{
-    res.status(200).json({msg:"Product testing route"})
+    const products = await Product.find({
+        name: "vase table"
+    })
+    res.status(200).json({
+        products , nbHits : products.length  
+    })
 }
 
 const getAllProducts = async (req,res)=>{
-    res.status(200).json({msg:"products route"})
+    const query = req.query
+    const products = await Product.find(
+        query
+    )
+    console.log(query)
+
+    res.status(200).json({
+        products , nbHits : products.length  
+    })
+
+    // res.status(200).json({msg:"products route"})
 }
 
 module.exports = {
-    getAllProductStatic,getAllProducts
+    getAllProductStatic,
+    getAllProducts
 }

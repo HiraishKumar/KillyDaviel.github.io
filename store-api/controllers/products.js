@@ -21,7 +21,6 @@ const getAllProducts = async (req,res)=>{
         products , nbHits : products.length  
     })
 
-    // res.status(200).json({msg:"products route"})
 }
 
 module.exports = {

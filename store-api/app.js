@@ -9,12 +9,13 @@ const errorMiddleware = require('./middleware/error-handler')
 
 // errorHandlerMiddleware
 app.use(express.json())
-
+app.use(express.static('./public'))
 // rootes
 
-app.get('/' , (req,res)=> {
-    res.send('<h1>Store Api</h1><a href="/api/v1/products" >Products route</a>')
-})
+// app.get('/' , (req,res)=> {
+//     res.sendFile('./public/index.html')
+//     // res.send('<h1>Store Api</h1><a href="/api/v1/products" >Products route</a>')
+// })
 
 app.use('/api/v1/products',productsRouter)
 

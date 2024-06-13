@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search</title>
 </head>
 <body>
-    
+  <input type="text" id="name" placeholder="Enter name">
+  <input type="number" id="age" placeholder="Enter age">
+  <button onclick="search()">Search</button>
+
+  <script>
+    function search() {
+      const name = document.getElementById('name').value;
+      const age = document.getElementById('age').value;
+      const url = new URL('http://www.example.com/search');
+      const params = { name: name, age: age };
+
+      // Append query parameters to the URL
+      for (const key in params) {
+        if (params[key]) {
+          url.searchParams.append(key, params[key]);
+        }
+      }
+
+      // Navigate to the new URL
+      window.location.href = url;
+    }
+  </script>
 </body>
 </html>

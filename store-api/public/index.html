@@ -12,10 +12,52 @@
         <h1>Search for a Name</h1>
         <form id="searchForm">
             <input type="text" id="nameInput" placeholder="Enter a name..." required>
-            <button type="submit">Search</button>
+            <button type="submit" onclick="search()">Search</button>
         </form>
     </div>
     <div id="response" class = "results"></div>
-    <script src="scripts.js"></script>
+    <script>
+        function search() {
+          const name = document.getElementById('nameInput').value;
+          const url = new URL('http://localhost:3000/api/v1/products');
+          const params = { name: name };
+    
+          // Append query parameters to the URL
+          for (const key in params) {
+            if (params[key]) {
+              url.searchParams.append(key, params[key]);
+            }
+          }
+    
+          // Navigate to the new URL
+          window.location.href = url;
+        }
+
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const resultDOM = document.querySelector('.results');
+
+            document.getElementById('searchForm').addEventListener('submit', async function(event) {
+                event.preventDefault();
+                const name = document.getElementById('nameInput').value;
+                const url = `http://localhost:3000/api/v1/products?name=${encodeURIComponent(name)}`;
+                
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    const data = await response.json();
+                    resultDOM.innerText = JSON.stringify(data, null, 2);
+                    
+                } catch (error) {
+                    console.error('Error:', error);
+                    resultDOM.innerHTML = '<h5 class="empty-list">There was an error, please try later....</h5>';
+                }
+            });
+        });
+
+      </script>
+    <!-- <script src="scripts.js"></script> -->
 </body>
 </html>

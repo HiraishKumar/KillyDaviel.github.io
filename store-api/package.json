@@ -16,5 +16,5 @@
     "dev": "nodemon app.js"
   },
   "author": "Hiraish Kumar",
-  "license": "CC0-1.0"
+  "license": "ISC"
 }

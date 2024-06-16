@@ -1,6 +1,5 @@
 const mongoose = require('mongoose')
-const { type } = require('os')
-const { features } = require('process')
+
 const ProductSchema = mongoose.Schema({
     name : {
         type:String,

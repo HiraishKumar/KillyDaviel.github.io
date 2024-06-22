@@ -66,7 +66,7 @@ const getAllProducts = async (req,res)=>{
     // sending the test html file
     // res.sendFile('website/store-api/public/test.html')
     res.status(200).json({
-        product , nbHits : product.length  
+        product , nbHits : product.length , page: Page 
     })
 }
 

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Front</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Search for a Name</h1>
+        <form id="searchForm">
+            <input type="text" id="nameInput" placeholder="Enter a name..." required>
+            <button type="submit" onclick="search()">Search</button>
+        </form>
+    </div>
+    <div id="response" class = "results"></div>
+    <script>
+        function search() {
+          const name = document.getElementById('nameInput').value;
+          const url = new URL('http://localhost:3000/api/v1/products');
+          const params = { name: name };
+    
+          // Append query parameters to the URL
+          for (const key in params) {
+            if (params[key]) {
+              url.searchParams.append(key, params[key]);
+            }
+          }
+    
+          // Navigate to the new URL
+          window.location.href = url;
+        }
+
+      </script>
+    <script src="scripts.js"></script>
+</body>
+</html>
